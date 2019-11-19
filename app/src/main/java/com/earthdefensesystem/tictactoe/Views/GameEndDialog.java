@@ -1,12 +1,24 @@
 package com.earthdefensesystem.tictactoe.Views;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
+
+import com.earthdefensesystem.tictactoe.R;
+
 public class GameEndDialog extends DialogFragment {
 
     private View rootView;
-    private GameActivity activity;
+    private MainActivity activity;
     private String winnerName;
 
-    public static GameEndDialog newInstance(GameActivity activity, String winnerName) {
+    public static GameEndDialog newInstance(MainActivity activity, String winnerName) {
         GameEndDialog dialog = new GameEndDialog();
         dialog.activity = activity;
         dialog.winnerName = winnerName;

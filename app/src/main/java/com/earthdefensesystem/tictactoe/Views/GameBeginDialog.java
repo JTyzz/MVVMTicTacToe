@@ -1,5 +1,20 @@
 package com.earthdefensesystem.tictactoe.Views;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
+
+import com.earthdefensesystem.tictactoe.R;
+
 public class GameBeginDialog extends DialogFragment {
 
     private TextInputLayout player1Layout;
@@ -12,9 +27,9 @@ public class GameBeginDialog extends DialogFragment {
     private String player2;
 
     private View rootView;
-    private GameActivity activity;
+    private MainActivity activity;
 
-    public static GameBeginDialog newInstance(GameActivity activity) {
+    public static GameBeginDialog newInstance(MainActivity activity) {
         GameBeginDialog dialog = new GameBeginDialog();
         dialog.activity = activity;
         return dialog;
