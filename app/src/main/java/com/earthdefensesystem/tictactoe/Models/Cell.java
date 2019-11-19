@@ -1,5 +1,7 @@
 package com.earthdefensesystem.tictactoe.Models;
 
+import com.earthdefensesystem.tictactoe.Utility.StringUtility;
+
 public class Cell {
     public Player player;
 
